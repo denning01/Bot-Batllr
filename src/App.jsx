@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import BotCollection from "./Components/BotCollection";
 import YourBotArmy from "./Components/YourBotArmy";
 import './App.css'; // Import CSS file for styling
+import Bot from "./Components/Bot";
+
 
 function App() {
   const [bots, setBots] = useState([]);
@@ -48,6 +50,7 @@ const handleDischarge = (botId) => {
       <div className="bot-layout">
         <BotCollection bots={bots} handleEnlist={handleEnlist} />
         <YourBotArmy army={army} handleDischarge={handleDischarge} />
+        {/* <Bot /> */}
       </div>
     </div>
   );
